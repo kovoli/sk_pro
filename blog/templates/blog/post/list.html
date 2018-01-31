@@ -59,32 +59,7 @@
                             {% endfor %}
                         </div>
 
-                        <!-- Blog Pagination -->
-                        <div class="page-pagination text-center mt-30 p-10 panel">
-                            <nav>
-                                <!-- Page Pagination -->
-                                <ul class="page-pagination">
-                                    <li><a class="page-numbers previous" href="#">Previous</a>
-                                    </li>
-                                    <li><a href="#" class="page-numbers">1</a>
-                                    </li>
-                                    <li><span class="page-numbers current">2</span>
-                                    </li>
-                                    <li><a href="#" class="page-numbers">3</a>
-                                    </li>
-                                    <li><a href="#" class="page-numbers">4</a>
-                                    </li>
-                                    <li><span class="page-numbers dots">...</span>
-                                    </li>
-                                    <li><a href="#" class="page-numbers">20</a>
-                                    </li>
-                                    <li><a href="#" class="page-numbers next">Next</a>
-                                    </li>
-                                </ul>
-                                <!-- End Page Pagination -->
-                            </nav>
-                        </div>
-                        <!-- End Blog Pagination -->
+{% include "pagination.html" with page=posts %}
 
                     </section>
                     <!-- End Blog Area -->
