@@ -30,6 +30,9 @@
                                                     <div class="entry-meta mb-10">
                                                         <ul class="tag-info list-inline">
                                                             <li><i class="icon fa fa-user"></i> By : {{ post.author }}</li>
+                                                            <li><i class="icon fa fa-comments"></i>
+                                                                <a href="{{ post.category.get_absolute_url }}">{{ post.category.name }}</a>
+                                                            </li>
                                                             <li><i class="icon fa fa-comments"></i> 14 Comments </li>
                                                         </ul>
                                                     </div>
@@ -44,18 +47,11 @@
                                                     <div class="blog-post-tags ptb-20">
                                                         <ul>
                                                             <li>Tags :</li>
+                                                            {% for tag in post.tags.all %}
                                                             <li>
-                                                                <a href="#">Deals</a>
+                                                                <a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="#">Shopping</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Coupons</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Commercial</a>
-                                                            </li>
+                                                            {% endfor %}
                                                         </ul>
                                                     </div>
                                                     <ul class="share-buttons ptb-20">
